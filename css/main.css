@@ -1,0 +1,199 @@
+/*//////////////////////////////////////
+	UNIVERSAL
+//////////////////////////////////////*/
+
+* {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-weight: normal;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding: 0;
+	margin: 0;
+	font-weight: normal;
+}
+
+img,
+video {
+	max-width: 100%;
+}
+
+input, button, select, textarea, submit {
+	border: none;
+}
+
+/* ---- Float clearfix ---- */
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+
+/*//////////////////////////////////////
+	TEXT TRANSFORM
+//////////////////////////////////////*/
+
+/*Uppercase*/
+
+/*Lowercase*/
+
+.x-axis-label,
+.y-axis-label {
+  font-weight: bold;
+}
+
+
+
+/*//////////////////////////////////////
+	FONTS
+//////////////////////////////////////*/
+
+/*BEVAN*/
+h1 {
+  font-family: 'Bevan', cursive;
+}
+
+/*SLABO*/
+h2,
+.axis-line,
+.indicator {
+  font-family: 'Slabo 27px', serif;
+}
+
+
+/*//////////////////////////////////////
+	COLORS
+//////////////////////////////////////*/
+
+/*BLUE*/
+.chart {
+  background: #9BD7D5;
+}
+
+/*PARCHMENT WHITE*/
+.site-content {
+  background-color: #FFF5C3;
+}
+
+/*WHITE*/
+#tooltip {
+  background: white;
+}
+
+
+
+/*//////////////////////////////////////
+	D3 SCATTER PLOT CHART
+//////////////////////////////////////*/
+
+.site-content {
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.chart {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 340px;
+  height: 650px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+h2 {
+  padding-bottom: 20px;
+}
+
+.indicator {
+  font-size: 21px;
+  padding: 20px 0;
+}
+
+/*//////////////////////////////////////
+	AXIS
+//////////////////////////////////////*/
+
+svg path,
+svg line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+svg text {
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+.x-axis-label,
+.y-axis-label {
+  font-size: 16px;
+}
+
+
+
+/*//////////////////////////////////////
+	TOOLTIP
+//////////////////////////////////////*/
+
+#tooltip {
+  position: absolute;
+  width: 200px;
+  padding: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+/*//////////////////////////////////////
+////////////////////////////////////////
+	MEDIA QUERIES
+////////////////////////////////////////
+//////////////////////////////////////*/
+
+@media (min-width: 600px) {
+  .chart {
+    width: 600px;
+    height: 650px;
+  }
+  
+  
+  
+}
+
+@media (min-width: 1000px) {
+  .chart {
+    width: 1100px;
+    height: 650px;
+  }
+  
+  
+  
+}
